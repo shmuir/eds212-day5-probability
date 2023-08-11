@@ -1,0 +1,45 @@
+---
+title: "Coding Practice"
+format: 
+  html:
+    code-fold: true
+    code-summary: "Show me the code!"
+editor: visual
+execute: 
+  warning: false
+  
+---
+
+```{r}
+library(tidyverse)
+library(ghibli)
+```
+
+
+## Exploring the Starwars Dataset
+
+```{r}
+head(starwars)
+dim(starwars)
+```
+
+```{r}
+ggplot(starwars, aes(height)) +
+  geom_histogram() +
+  theme_linedraw() 
+
+ggplot(starwars, aes(height, mass, color = gender)) +
+  geom_point() +
+  theme_linedraw() +
+  scale_color_ghibli_d("KikiLight", -1)
+
+```
+
+## Summary Statistics
+
+```{r}
+mean_height <- mean(starwars$height, na.rm = TRUE)
+sd_height <- mean(starwars$height, na.rm = TRUE)
+```
+
+
