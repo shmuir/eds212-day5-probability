@@ -39,7 +39,7 @@ ggplot(starwars, aes(height, mass, color = gender)) +
 
 ```{r}
 mean_height <- mean(starwars$height, na.rm = TRUE)
-sd_height <- mean(starwars$height, na.rm = TRUE)
+sd_height <- sd(starwars$height, na.rm = TRUE)
 ```
 
 
