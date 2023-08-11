@@ -16,7 +16,7 @@ library(ghibli)
 ```
 
 
-## Exploring the Starwars Dataset
+## Exploring the Star Wars Dataset
 
 ```{r}
 head(starwars)
@@ -37,9 +37,20 @@ ggplot(starwars, aes(height, mass, color = gender)) +
 
 ## Summary Statistics
 
+#### Mean height
 ```{r}
 mean_height <- mean(starwars$height, na.rm = TRUE)
-sd_height <- sd(starwars$height, na.rm = TRUE)
+mean_height
 ```
+
+#### Standard Deviation height
+```{r}
+sd_height <- sd(starwars$height, na.rm = TRUE)
+sd_height
+```
+
+## In-line reporting using code outputs
+
+The mean height of Star Wars characters is `r mean_height` cm with a standard deviation of `r sd_height` cm.
 
 
